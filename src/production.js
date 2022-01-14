@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-function Production({coin, setCoin, imgSpares}){
+function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus}){
   const [value, setValue] = useState('');
   const [value2, setValue2] = useState('');
   function changeHandlerType(event) {
@@ -15,9 +15,14 @@ function Production({coin, setCoin, imgSpares}){
    
   }
 
-  const [imgStatus, setImgStatus] = useState(imgSpares.device.disable);
- 
   
+  function chengeImg(){
+    if (imgStatus == spares.device.img.enable){
+      setImgStatus(spares.device.img.active)} else 
+    {if (imgStatus == spares.device.img.active){
+      setImgStatus(spares.device.img.enable)}}
+  }
+
   return <div>
   <h2>
     Производство
@@ -60,10 +65,16 @@ function Production({coin, setCoin, imgSpares}){
   <label htmlFor="famale">Famale</label>
   
   <img src={imgStatus}
-  onClick={() => setImgStatus(imgSpares.device.active)}></img>
+  onClick={() => chengeImg()} ></img>
+  <img src={imgStatus}
+  onClick={() => chengeImg()} ></img>
+  <img src={imgStatus}
+  onClick={() => chengeImg()} ></img>
+  <img src={imgStatus}
+  onClick={() => chengeImg()} ></img>
+  {/* <img src={imgSpares.device.disable}></img>
   <img src={imgSpares.device.disable}></img>
-  <img src={imgSpares.device.disable}></img>
-  <img src={imgSpares.device.disable}></img>
+  <img src={imgSpares.device.disable}></img> */}
 
   <button disabled={coin < 10 } onClick={() => setCoinBalance (10)}>Произвести за 10 монет</button>
   </div>
