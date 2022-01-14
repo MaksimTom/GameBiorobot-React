@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 import Spares from './spares';
-function Stock ({coin, setCoin, spares, setSpares}){
+function Stock ({coin, setCoin, spares, setSpares,  setImgStatus}){
 
-  
-function setCoinBalance (price, index){
+function setCoinBalance (price, name){
   setCoin(coin + price);
-  const copy = Object.assign([], spares);
-    copy[index].balance --;
-    setSpares(copy);
+  const copy = Object.assign({}, spares);
+  copy[name].balance --;
+  copy[name].balance == 0 ? setImgStatus (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
+  setSpares(copy);
 }
   return <div>
     <h2>Склад</h2>
     <h3>Биомеханизм</h3>
     <p>Стоимость: <span>5</span> монет</p>
-    <p><span>{spares[0].balance}</span>шт.</p>
-    <button disabled={spares[0].balance == 0} onClick={() => setCoinBalance (5, 0)} >Продать</button>
+    <p><span>{spares.device.balance}</span>шт.</p>
+    <button disabled={spares.device.balance == 0} onClick={() => setCoinBalance (5, 'device')} >Продать</button>
 
     <h3>Процессор</h3>
     <p>Стоимость: <span>3</span> монет</p>
-    <p><span>{spares[1].balance}</span>шт.</p>
-    <button disabled={spares[1].balance == 0} onClick={() => setCoinBalance (3, 1)} >Продать</button>
+    <p><span>{spares.cpu.balance}</span>шт.</p>
+    <button disabled={spares.cpu.balance == 0} onClick={() => setCoinBalance (3, 'cpu')} >Продать</button>
 
     <h3>Душа</h3>
     <p>Стоимость: <span>15</span> монет</p>
-    <p><span>{spares[2].balance}</span>шт.</p>
-    <button disabled={spares[2].balance == 0} onClick={() => setCoinBalance (15, 2)} >Продать</button>
+    <p><span>{spares.soul.balance}</span>шт.</p>
+    <button disabled={spares.soul.balance == 0} onClick={() => setCoinBalance (15, 'soul')} >Продать</button>
   </div>
 }
 
