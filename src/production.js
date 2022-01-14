@@ -14,8 +14,10 @@ function Production({coin, setCoin, imgSpares}){
     setCoin(coin - price);
    
   }
+
+  const [imgStatus, setImgStatus] = useState(imgSpares.device.disable);
  
-  console.log(imgSpares.device.disable);
+  
   return <div>
   <h2>
     Производство
@@ -57,8 +59,8 @@ function Production({coin, setCoin, imgSpares}){
 	onChange={changeHandlerGender}></input>
   <label htmlFor="famale">Famale</label>
   
-  <img src={imgSpares.device.disable}
-  onClick={imgSpares.device.active}></img>
+  <img src={imgStatus}
+  onClick={() => setImgStatus(imgSpares.device.active)}></img>
   <img src={imgSpares.device.disable}></img>
   <img src={imgSpares.device.disable}></img>
   <img src={imgSpares.device.disable}></img>
