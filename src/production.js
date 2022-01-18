@@ -23,6 +23,12 @@ function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus})
       setImgStatus(spares.device.img.enable)}}
   }
 
+  // const [checked, setChecked] = useState(false);
+
+  function check(event) {
+    !event.target.checked ? event.target.checked = false : event.target.checked = true
+  };
+    
   return <div>
   <h2>
     Производство
@@ -64,17 +70,22 @@ function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus})
 	onChange={changeHandlerGender}></input>
   <label htmlFor="famale">Famale</label>
   
-  <img src={imgStatus}
+  {/* <img src={imgStatus}
   onClick={() => chengeImg()} ></img>
   <img src={imgStatus}
   onClick={() => chengeImg()} ></img>
   <img src={imgStatus}
   onClick={() => chengeImg()} ></img>
   <img src={imgStatus}
-  onClick={() => chengeImg()} ></img>
-  {/* <img src={imgSpares.device.disable}></img>
-  <img src={imgSpares.device.disable}></img>
-  <img src={imgSpares.device.disable}></img> */}
+  onClick={() => chengeImg()} ></img> */}
+<input type="checkbox" id='1' name="statusDevice"  onChange={check} disabled={false}></input>
+<input type="checkbox" id='2' name="statusDevice"  onChange={check}></input>
+<input type="checkbox" id='3' name="statusDevice"  onChange={check}></input>
+<input type="checkbox" id='4' name="statusDevice"  onChange={check}></input>
+
+{/* <input type="checkbox" name="statusDevice" checked={checked} onChange={() => setChecked(!checked)}></input>
+<input type="checkbox" name="statusDevice" checked={checked} onChange={() => setChecked(!checked)}></input>
+<input type="checkbox" name="statusDevice" checked={checked} onChange={() => setChecked(!checked)}></input> */}
 
   <button disabled={coin < 10 } onClick={() => setCoinBalance (10)}>Произвести за 10 монет</button>
   </div>
