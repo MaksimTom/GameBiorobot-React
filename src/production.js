@@ -23,7 +23,7 @@ function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus})
       setImgStatus(spares.device.img.enable)}}
   }
 
-<
+
 const [amountSelected, setAmountSelected] = useState(
   {device: 4, cpu: 4, soul: 1});
 
