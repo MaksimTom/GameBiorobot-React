@@ -12,7 +12,7 @@ function App() {
     {  device:{
         buy: 7, 
         sale: 5, 
-        balance: 10,
+        balance: 6,
         img:{
           disable: 'img/mehDesable.png',
           enable: 'img/mehEnable.png',
