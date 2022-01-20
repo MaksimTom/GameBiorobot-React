@@ -23,6 +23,26 @@ function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus})
       setImgStatus(spares.device.img.enable)}}
   }
 
+
+const [amountSelected, setAmountSelected] = useState(
+  {device: 4, cpu: 4, soul: 1});
+
+  function check(event) {
+    const copy = Object.assign({}, amountSelected)
+     if (event.target.checked) {
+      event.target.checked = true;
+      copy[event.target.name]--
+    } else {
+      event.target.checked = false;
+      copy[event.target.name]++;
+    }
+    setAmountSelected(copy);
+  };
+  if (amountSelected.device < 1){
+
+//fff
+  }
+
   return <div>
   <h2>
     Производство
@@ -64,18 +84,26 @@ function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus})
 	onChange={changeHandlerGender}></input>
   <label htmlFor="famale">Famale</label>
   
-  <img src={imgStatus}
-  onClick={() => chengeImg()} ></img>
-  <img src={imgStatus}
-  onClick={() => chengeImg()} ></img>
-  <img src={imgStatus}
-  onClick={() => chengeImg()} ></img>
-  <img src={imgStatus}
-  onClick={() => chengeImg()} ></img>
-  {/* <img src={imgSpares.device.disable}></img>
-  <img src={imgSpares.device.disable}></img>
-  <img src={imgSpares.device.disable}></img> */}
 
+
+  <p>
+<input type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 1)}></input>
+<input type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 2)}></input>
+<input type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 3)}></input>
+<input type="checkbox" name="device"  onChange={(check)} disabled={!(spares.device.balance >= 4)}></input>
+</p>
+<p>
+<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 1)}></input>
+<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 2)}></input>
+<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 2)}></input>
+<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 2)}></input>
+</p>
+
+<p><input type="checkbox" name="soul"  onChange={(check)} disabled={!(spares.soul.balance >= 1)}></input>
+</p>
+<p>
+  Не хватает <span>{amountSelected.device} биомеханизма</span> , {amountSelected.cpu} процессора, {amountSelected.soul} души и денег
+</p>
   <button disabled={coin < 10 } onClick={() => setCoinBalance (10)}>Произвести за 10 монет</button>
   </div>
 }
