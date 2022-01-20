@@ -23,6 +23,7 @@ function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus})
       setImgStatus(spares.device.img.enable)}}
   }
 
+<
 const [amountSelected, setAmountSelected] = useState(
   {device: 4, cpu: 4, soul: 1});
 
@@ -39,8 +40,9 @@ const [amountSelected, setAmountSelected] = useState(
   };
   if (amountSelected.device < 1){
 
-
+//fff
   }
+
   return <div>
   <h2>
     Производство
@@ -82,6 +84,7 @@ const [amountSelected, setAmountSelected] = useState(
 	onChange={changeHandlerGender}></input>
   <label htmlFor="famale">Famale</label>
   
+
 
   <p>
 <input type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 1)}></input>
