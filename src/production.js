@@ -43,8 +43,12 @@ const [amountSelected, setAmountSelected] = useState(
 //fff
   }
 
-  return <div>
-  <h2>
+  return <div className="wrapper ">
+  <div className='page__number'>
+    05
+  </div>
+    <div className='content'>
+  <h2 className='title__h2'>
     Производство
   </h2>
   <p>Типа биоробота:</p>
@@ -105,6 +109,7 @@ const [amountSelected, setAmountSelected] = useState(
   Не хватает <span>{amountSelected.device} биомеханизма</span> , {amountSelected.cpu} процессора, {amountSelected.soul} души и денег
 </p>
   <button disabled={coin < 10 } onClick={() => setCoinBalance (10)}>Произвести за 10 монет</button>
+  </div>
   </div>
 }
 
