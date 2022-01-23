@@ -14,7 +14,7 @@ function App() {
         sale: 5, 
         balance: 6,
         img:{
-          disable: 'img/mehDesable.png',
+          disable: 'img/mehDisable.png',
           enable: 'img/mehEnable.png',
           active: 'img/mehActive.png'
         }},
