@@ -8,9 +8,9 @@ function Wallet({coin, setCoin}) {
   function clickCoin(event){
     event.preventDefault();
     if (checked){
-      setCoin(coin + 5)
+      (coin + 5) > 100 ?  alert ('lot') : setCoin(coin + 5);
     } else {
-      setCoin(coin + 1)}
+      (coin + 1) > 100 ?  alert ('lot') : setCoin(coin + 1);}
 
   }
 
@@ -34,7 +34,7 @@ function Wallet({coin, setCoin}) {
     <div>
       <div className='coins'>
         
-{imgCoin()}
+
 
       </div>
       <p className='coins__text'>

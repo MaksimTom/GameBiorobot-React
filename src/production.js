@@ -47,70 +47,92 @@ const [amountSelected, setAmountSelected] = useState(
   <div className='page__number'>
     05
   </div>
-    <div className='content'>
-  <h2 className='title__h2'>
-    Производство
-  </h2>
-  <p>Типа биоробота:</p>
-  <input 
-  type="radio" 
-  name="type" 
-  value="frontend"
-  id="front"
-  checked={value === 'frontend' ? true : false}
-	onChange={changeHandlerType}></input>
-  <label htmlFor="front">FrontEnd</label>
-  <input 
-  type="radio" 
-  name="type" 
-  value="design"
-  id="design"
-  checked={value === 'design' ? true : false}
-	onChange={changeHandlerType}></input>
-  <label htmlFor="design">Design</label>
+  <div className='content'>
+    <h2 className='title__h2'>
+      Производство
+    </h2>
+    <div className='list__wrapper'>
+      <div className='types'>
+        <h3 className='types__title'>Типа биоробота:</h3>
+        <div className='types__check'>
+          <div className='type__check'>
+            <input 
+            type="radio" 
+            name="type" 
+            value="frontend"
+            id="front"
+            checked={value === 'frontend'}
+            onChange={changeHandlerType}></input>
+            <label className='types__label' htmlFor="front">FrontEnd</label>
+          </div>
+          <div className='type__check'>
+            <input 
+            type="radio" 
+            name="type" 
+            value="design"
+            id="design"
+            checked={value === 'design'}
+            onChange={changeHandlerType}></input>
+            <label className='types__label' htmlFor="design">Design</label>
+          </div>
+        </div>
 
-  <p>Стабилизатор:</p>
-  <input 
-  type="radio" 
-  name="gender" 
-  value="male"
-  id="male"
-  checked={value2 === 'male' ? true : false}
-	onChange={changeHandlerGender}></input>
-  <label htmlFor="male">Male</label>
+        <h3 className='types__title'>Стабилизатор:</h3>
+        <div className='types__check'>
+          <div className='type__check'>
+            <input 
+            type="radio" 
+            name="gender" 
+            value="male"
+            id="male"
+            checked={value2 === 'male'}
+            onChange={changeHandlerGender}></input>
+            <label className='types__label' htmlFor="male">Male</label>
+          </div>
+          <div className='type__check'>
+            <input 
+            type="radio" 
+            name="gender" 
+            value="famale"
+            id="famale"
+            checked={value2 === 'famale'}
+            onChange={changeHandlerGender}></input>
+            <label className='types__label' htmlFor="famale">Famale</label>
+          </div> 
+        </div>
+        <button className='ccc' disabled={coin < 10 } onClick={() => setCoinBalance (10)}>Произвести за 10 монет</button>
+      </div>
 
-  <input 
-  type="radio" 
-  name="gender" 
-  value="famale"
-  id="famale"
-  checked={value2 === 'famale' ? true : false}
-	onChange={changeHandlerGender}></input>
-  <label htmlFor="famale">Famale</label>
-  
+      <div className='checkboxes'>
+        <div className='checkboxes-device'>
+          <input className='checks checkDevice' type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 1)}></input>
+          <input className='checks checkDevice'  type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 2)}></input>
+          <input className='checks checkDevice'  type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 3)}></input>
+          <input className='checks checkDevice'  type="checkbox" name="device"  onChange={(check)} disabled={!(spares.device.balance >= 4)}></input>
+        </div>
 
+        <div className='checkboxes-cpu'>
+          <input className='checks checkCpu' type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 1)}></input>
+          <input className='checks checkCpu' type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 2)}></input>
+          <input className='checks checkCpu' type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 3)}></input>
+          <input className='checks checkCpu' type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 4)}></input>
+        </div>
 
-  <p>
-<input type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 1)}></input>
-<input type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 2)}></input>
-<input type="checkbox" name="device"  onChange={check} disabled={!(spares.device.balance >= 3)}></input>
-<input type="checkbox" name="device"  onChange={(check)} disabled={!(spares.device.balance >= 4)}></input>
-</p>
-<p>
-<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 1)}></input>
-<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 2)}></input>
-<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 2)}></input>
-<input type="checkbox" name="cpu"  onChange={(check)} disabled={!(spares.cpu.balance >= 2)}></input>
-</p>
-
-<p><input type="checkbox" name="soul"  onChange={(check)} disabled={!(spares.soul.balance >= 1)}></input>
-</p>
-<p>
-  Не хватает <span>{amountSelected.device} биомеханизма</span> , {amountSelected.cpu} процессора, {amountSelected.soul} души и денег
-</p>
-  <button disabled={coin < 10 } onClick={() => setCoinBalance (10)}>Произвести за 10 монет</button>
+        <div className='checkboxes-soul'>
+          <input className='checks checkSoul' type="checkbox" name="soul"  onChange={(check)} disabled={!(spares.soul.balance >= 1)}></input>
+        </div>
+        <div>
+          Не хватает <span>{amountSelected.device} биомеханизма</span> , {amountSelected.cpu} процессора, {amountSelected.soul} души и денег
+        </div>
+        
+      </div>
+      <div className='imgsRobots'>
+        <img className='imgRobot' src='/img/FrontMaleActive.png'></img>
+      </div>
+      
+    </div>
   </div>
-  </div>
+</div>
 }
 
 export default Production;
