@@ -33,9 +33,7 @@ function Wallet({coin, setCoin}) {
     </h2>
     <div>
       <div className='coins'>
-        
         {imgCoin()}
-
       </div>
       <p className='coins__text'>
       <span className='coins__num'>{coin}</span> biorobo монет

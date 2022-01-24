@@ -3,6 +3,7 @@ import Spares from './spares';
 function Stock ({coin, setCoin, spares, setSpares,  setImgStatus}){
 
 function setCoinBalance (price, name){
+
   if ((coin + price) > 100) {
     alert ('lot')} else {
       setCoin(coin + price);
@@ -11,6 +12,7 @@ function setCoinBalance (price, name){
       // copy[name].balance == 0 ? setImgStatus (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
       setSpares(copy);}
   }
+
   return <div className="wrapper ">
   <div className='page__number'>
     04
