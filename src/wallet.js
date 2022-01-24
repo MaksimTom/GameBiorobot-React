@@ -17,7 +17,7 @@ function Wallet({coin, setCoin}) {
   function imgCoin(){
     const arr = [];
 	  for (let i = 1; i <= coin; i++) {
-		arr.push(<img className='coin' src='/img/coin.png'></img>);
+		arr.push(<img key={i} className='coin' src='/img/coin.png'></img>);
 	}
 	return <>{arr}</>
 	
@@ -34,7 +34,7 @@ function Wallet({coin, setCoin}) {
     <div>
       <div className='coins'>
         
-
+        {imgCoin()}
 
       </div>
       <p className='coins__text'>

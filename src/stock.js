@@ -3,13 +3,14 @@ import Spares from './spares';
 function Stock ({coin, setCoin, spares, setSpares,  setImgStatus}){
 
 function setCoinBalance (price, name){
-  (coin + price) > 100 ?  alert ('lot') : setCoin(coin + price);
-  
-  const copy = Object.assign({}, spares);
-  copy[name].balance --;
-  copy[name].balance == 0 ? setImgStatus (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
-  setSpares(copy);
-}
+  if ((coin + price) > 100) {
+    alert ('lot')} else {
+      setCoin(coin + price);
+      const copy = Object.assign({}, spares);
+      copy[name].balance --;
+      // copy[name].balance == 0 ? setImgStatus (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
+      setSpares(copy);}
+  }
   return <div className="wrapper ">
   <div className='page__number'>
     04

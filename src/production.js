@@ -16,12 +16,12 @@ function Production({coin, setCoin, spares, setSpares, imgStatus, setImgStatus})
   }
 
   
-  function chengeImg(){
-    if (imgStatus == spares.device.img.enable){
-      setImgStatus(spares.device.img.active)} else 
-    {if (imgStatus == spares.device.img.active){
-      setImgStatus(spares.device.img.enable)}}
-  }
+  // function chengeImg(){
+  //   if (imgStatus == spares.device.img.enable){
+  //     setImgStatus(spares.device.img.active)} else 
+  //   {if (imgStatus == spares.device.img.active){
+  //     setImgStatus(spares.device.img.enable)}}
+  // }
 
 
 const [amountSelected, setAmountSelected] = useState(

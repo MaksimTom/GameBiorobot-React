@@ -8,7 +8,7 @@ function Market ({coin, setCoin, spares, setSpares, setImgStatus}){
     setCoin(coin - price);
     const copy = Object.assign({}, spares);
     copy[name].balance ++;
-    copy[name].balance == 0 ? setImgStatus (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
+    // copy[name].balance == 0 ? setImgStatus (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
     setSpares(copy);
   }
 

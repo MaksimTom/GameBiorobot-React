@@ -1,0 +1,85 @@
+[33mcommit dca88e859301233eb58e08b9d5d38e2a676c1fed[m[33m ([m[1;36mHEAD -> [m[1;32mimg[m[33m, [m[1;31morigin/img[m[33m)[m
+Author: Maxim <tomashov.maksim@mail.ru>
+Date:   Sun Jan 23 18:15:40 2022 +0700
+
+    css
+
+[33mcommit 7e3cb9275da1a32390801526aecaf72c3b7544ba[m
+Author: Maxim <tomashov.maksim@mail.ru>
+Date:   Sat Jan 22 16:15:05 2022 +0700
+
+    css
+
+[33mcommit fa64bb674ac8f787b62e00cbd73d6cc1047376dd[m
+Author: Maxim <tomashov.maksim@mail.ru>
+Date:   Thu Jan 20 20:04:20 2022 +0700
+
+    1
+
+[33mcommit 97d72935fc40670b3debe1f3c912dc31d154925f[m
+Merge: 3f608ed a814f11
+Author: Maxim Tomashov <tomashov.maksim@mail.ru>
+Date:   Thu Jan 20 19:48:42 2022 +0700
+
+    Merge branch 'master' into img
+
+[33mcommit 3f608ed30575507f38ca7df3a93cf3516195e8c3[m
+Author: Maxim <tomashov.maksim@mail.ru>
+Date:   Thu Jan 20 19:32:06 2022 +0700
+
+    добавлена логика выбранных элементов
+
+[33mcommit b864f185d46648aa654b5dfbcf92ddf59c09498d[m
+Author: Maxim <tomashov.maksim@mail.ru>
+Date:   Tue Jan 18 22:25:50 2022 +0700
+
+    check img
+
+[33mcommit a814f11f80bbf848d0334cb5b04bffdc6befa0ca[m
+Author: MaksimTom <tomashov.maksim@mail.ru>
+Date:   Fri Jan 14 17:25:41 2022 +0700
+
+    фиксация: img
+
+[33mcommit d30c6ac854f079c33cb33f80a6f3e61d2322ed81[m
+Author: MaksimTom <tomashov.maksim@mail.ru>
+Date:   Fri Jan 14 17:25:41 2022 +0700
+
+    фиксация: img
+
+[33mcommit c15b85b9e4bb14da77e03b60ddb3fb868f29d582[m[33m ([m[1;32mmaster[m[33m)[m
+Author: MaksimTom <tomashov.maksim@mail.ru>
+Date:   Fri Jan 14 09:28:34 2022 +0700
+
+    фиксация: "master"
+
+[33mcommit 117c408d541e903acb551cdc15c9f89cfb7756ae[m
+Author: Maxim Tomashov <tomashov.maksim@mail.ru>
+Date:   Thu Jan 13 22:53:46 2022 +0700
+
+    Update README.md
+
+[33mcommit 870f3f6952813f30ceafdf5da329d2e1fed7df70[m
+Merge: 4d0f361 0696ee9
+Author: MaksimTom <tomashov.maksim@mail.ru>
+Date:   Thu Jan 13 22:48:58 2022 +0700
+
+    Merge branch 'master' of https://github.com/MaksimTom/GameBiorobot-React
+
+[33mcommit 4d0f36126eec378773f85c740a4ca6e425e767b2[m
+Author: MaksimTom <tomashov.maksim@mail.ru>
+Date:   Thu Jan 13 22:48:03 2022 +0700
+
+    фиксация master
+
+[33mcommit 0696ee94bf52bbb20a40a59e225b83a2d3790723[m
+Author: Maxim Tomashov <tomashov.maksim@mail.ru>
+Date:   Thu Jan 13 22:44:56 2022 +0700
+
+    Update README.md
+
+[33mcommit 8eed4985e93af0dddd5b5f76d6e58d3bd7225c22[m
+Author: MaksimTom <tomashov.maksim@mail.ru>
+Date:   Sun Jan 9 14:01:50 2022 +0700
+
+    Initialize project using Create React App

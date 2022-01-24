@@ -27,16 +27,16 @@ function App() {
         sale: 15, 
         balance: 10}
      });
-  const [imgStatus, setImgStatus] = useState (spares.device.img.disable);
+  // const [imgStatus, setImgStatus] = useState (spares.device.img.disable);
  
 	return <div>
 		
     {/* <Spares /> */}
     <Header />
     <Wallet coin={coin} setCoin={setCoin} />
-    <Market coin={coin} setCoin={setCoin} balance={balance} setBalance={setBalance} spares={spares} setSpares={setSpares} setImgStatus={setImgStatus}/>
-    <Stock coin={coin} setCoin={setCoin} spares={spares} setSpares={setSpares} setImgStatus={setImgStatus}/>
-    <Production coin={coin} setCoin={setCoin} spares={spares} setSpares={setSpares} imgStatus={imgStatus} setImgStatus={setImgStatus}/>
+    <Market coin={coin} setCoin={setCoin} balance={balance} setBalance={setBalance} spares={spares} setSpares={setSpares} />
+    <Stock coin={coin} setCoin={setCoin} spares={spares} setSpares={setSpares} />
+    <Production coin={coin} setCoin={setCoin} spares={spares} setSpares={setSpares} />
 	</div>
 }
 
