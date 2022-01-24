@@ -8,7 +8,8 @@ function Market ({coin, setCoin, spares, setSpares, setImgStatus}){
     setCoin(coin - price);
     const copy = Object.assign({}, spares);
     copy[name].balance ++;
-    copy[name].balance == 0 ? setImgStatus (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
+    // copy[name].balance == 0 ? setImgStatus 
+    // (spares[name].img.disable) : setImgStatus(spares[name].img.enable);
     setSpares(copy);
   }
 
@@ -20,33 +21,33 @@ return <div className="wrapper ">
   <h2 className='title__h2'>
     Рынок комплектующих
   </h2>
-  <div className='market__content'>
-    <div>
+  <div className='list__wrapper'>
+    <div className='list'>
     <div className='imgMarket'>
       <img src='/img/biomeh.png'></img>
       </div>
     <h3 className='title__h3'>Биомеханизм</h3>
     <p className='subtitle__h3'>Стоимость: <span>7</span> монет</p>
-    <button className='install' disabled={coin < 7 } onClick={() => setCoinBalance (7, 'device')} >Установить</button>
+    <button className='buttons button__market' disabled={coin < 7 } onClick={() => setCoinBalance (7, 'device')} >Установить</button>
     </div>
     
-    <div>
+    <div className='list'>
       <div className='imgMarket'>
       <img src='/img/CPUicon.png'></img>
       </div>
     
     <h3 className='title__h3'>Процессор</h3>
     <p className='subtitle__h3'>Стоимость: <span>5</span> монет</p>
-    <button className='install' disabled={coin < 5 } onClick={() => setCoinBalance (5, 'cpu')}>Установить</button>
+    <button className='buttons button__market' disabled={coin < 5 } onClick={() => setCoinBalance (5, 'cpu')}>Установить</button>
     </div>
     
-    <div>
+    <div className='list'>
     <div className='imgMarket'>
       <img src='/img/SoulIcon.png'></img>
       </div>
     <h3 className='title__h3'>Душа</h3>
     <p className='subtitle__h3'>Стоимость: <span>25</span> монет</p>
-    <button className='install' disabled={coin < 25 } onClick={() => setCoinBalance (25, 'soul')}>Установить</button>
+    <button className='buttons button__market' disabled={coin < 25 } onClick={() => setCoinBalance (25, 'soul')}>Установить</button>
     </div>
   </div>
   

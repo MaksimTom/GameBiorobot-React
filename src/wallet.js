@@ -8,16 +8,16 @@ function Wallet({coin, setCoin}) {
   function clickCoin(event){
     event.preventDefault();
     if (checked){
-      setCoin(coin + 5)
+      (coin + 5) > 100 ?  alert ('lot') : setCoin(coin + 5);
     } else {
-      setCoin(coin + 1)}
+      (coin + 1) > 100 ?  alert ('lot') : setCoin(coin + 1);}
 
   }
 
   function imgCoin(){
     const arr = [];
 	  for (let i = 1; i <= coin; i++) {
-		arr.push(<img className='coin' src='/img/coin.png'></img>);
+		arr.push(<img key={i} className='coin' src='/img/coin.png'></img>);
 	}
 	return <>{arr}</>
 	
@@ -33,9 +33,7 @@ function Wallet({coin, setCoin}) {
     </h2>
     <div>
       <div className='coins'>
-        
-{imgCoin()}
-
+        {imgCoin()}
       </div>
       <p className='coins__text'>
       <span className='coins__num'>{coin}</span> biorobo монет
